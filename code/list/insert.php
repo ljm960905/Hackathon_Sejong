@@ -1,7 +1,7 @@
 <?php 
 
 
-$mysqli = new mysqli('133.130.118.67','test','Tmtmwl2016!','food');
+$mysqli = new mysqli('{adderss}','test','Tmtmwl2016!','food');
 //$mysqli = new mysqli('localhost','root','','food');
 if (mysqli_connect_error()) {
     exit('Connect Error (' . mysqli_connect_errno() . ') '. mysqli_connect_error());
@@ -15,7 +15,7 @@ $mysqli->close();
 $start = 1;
 $end = 1000;
 $cnt = 0;
-$url1 = 'http://openAPI.gwangjin.go.kr:8088/44465a6875686f793934757579434b/json/GwangjinFoodHygieneBiz/';
+$url1 = 'http://openAPI.gwangjin.go.kr:8088/{ApI_KeY}/json/GwangjinFoodHygieneBiz/';
 $result = "";
 
 /* 요청 보내고 정보 받아오기*/ 
