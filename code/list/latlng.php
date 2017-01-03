@@ -2,7 +2,7 @@
 $id = 1;
 while(1){
 	
-	$mysqli = new mysqli('133.130.118.67','test','Tmtmwl2016!','food');
+	$mysqli = new mysqli('{address}','test','Tmtmwl2016!','food');
 	if (mysqli_connect_error()) {
 	    exit('Connect Error (' . mysqli_connect_errno() . ') '. mysqli_connect_error());
 	}
@@ -15,8 +15,8 @@ while(1){
 	if(empty($addr['res_addr']))
 		break;
 
-	  $client_id = "aFu4LZbC8kSwUv97CtZu";
-	  $client_secret = "JD86cnKdy8";
+	  $client_id = "{client_id}";
+	  $client_secret = "{client_secret}";
 	  $encText = urlencode($addr['res_addr']);
 	  $url = "https://openapi.naver.com/v1/map/geocode?query=".$encText; 
 
@@ -40,7 +40,7 @@ while(1){
 	    echo "</br>";
 	    echo $result->y;
     
-	    $mysqli = new mysqli('133.130.118.67','test','Tmtmwl2016!','food');
+	    $mysqli = new mysqli('{address}','test','Tmtmwl2016!','food');
 
 		if (mysqli_connect_error()) {
 	    exit('Connect Error (' . mysqli_connect_errno() . ') '. mysqli_connect_error());
